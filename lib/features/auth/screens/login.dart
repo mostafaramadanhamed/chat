@@ -6,6 +6,7 @@ import '../../../common/constant/app_color.dart';
 import '../../../common/constant/app_string.dart';
 import '../../../common/utils/utils.dart';
 import '../../../common/widgets/custom_button.dart';
+import '../controller/auth_controller.dart';
 
 class LoginScreen extends ConsumerStatefulWidget {
   static const routeName='/login-screen';
@@ -38,12 +39,12 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
 
   void sendPhoneNumber(){
     String phoneNumber=phoneController.text.trim();
-    // if(country != null && phoneNumber.isNotEmpty){
-    //   ref.read(authControllerProvider).signInWithPhone(context, '+${country!.phoneCode}$phoneNumber');
-    // }
-    // else{
-    //   showSnackBar(context: context, content: 'Fill out all fields');
-    // }
+    if(country != null && phoneNumber.isNotEmpty){
+      ref.read(authControllerProvider).signInWithPhone(context, '+${country!.phoneCode}$phoneNumber');
+    }
+    else{
+      showSnackBar(context: context, content: 'Fill out all fields');
+    }
   }
   @override
   Widget build(BuildContext context) {
