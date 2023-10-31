@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 
 import '../common/widgets/error.dart';
 import 'auth/screens/login.dart';
+import 'auth/screens/otb_screen.dart';
+import 'auth/screens/user_info.dart';
 
 Route<dynamic>generateRoute(RouteSettings settings){
   switch(settings.name){
@@ -11,15 +13,15 @@ Route<dynamic>generateRoute(RouteSettings settings){
       return MaterialPageRoute(builder: (context){
         return const LoginScreen();
       });
-    // case OtbScreen.routeName:
-    //   final String verificationId=settings.arguments as String;
-    //   return MaterialPageRoute(builder: (context){
-    //     return  OtbScreen(verificationId: verificationId,);
-    //   });
-    // case UserInformationScreen.routeName:
-    //   return MaterialPageRoute(builder: (context){
-    //     return  const UserInformationScreen();
-    //   });
+    case OtbScreen.routeName:
+      final String verificationId=settings.arguments as String;
+      return MaterialPageRoute(builder: (context){
+        return  OtbScreen(verificationId: verificationId,);
+      });
+    case UserInformationScreen.routeName:
+      return MaterialPageRoute(builder: (context){
+        return  const UserInformationScreen();
+      });
     // case ContactScreen.routeName:
     //   return MaterialPageRoute(builder: (context){
     //     return  const ContactScreen();
