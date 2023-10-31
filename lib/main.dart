@@ -1,10 +1,13 @@
 import 'package:chat/features/landing/landin_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'common/constant/app_color.dart';
+import 'features/app_router.dart';
 
 void main() {
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -21,7 +24,8 @@ class MyApp extends StatelessWidget {
             color: appBarColor,
           ),
         ),
-      title: 'Flutter Demo',
+        onGenerateRoute: (setting)=>generateRoute(setting),
+        title: 'Flutter Demo',
       home:const LandingScreen()
     );
   }

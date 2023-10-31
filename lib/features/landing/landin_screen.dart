@@ -4,6 +4,7 @@ import '../../common/constant/app_assets.dart';
 import '../../common/constant/app_color.dart';
 import '../../common/constant/app_string.dart';
 import '../../common/widgets/custom_button.dart';
+import '../auth/screens/login.dart';
 
 
 class LandingScreen extends StatelessWidget {
@@ -11,7 +12,7 @@ class LandingScreen extends StatelessWidget {
 
 
   void navigateToLoginScreen(BuildContext context) {
- //   Navigator.pushNamed(context, LoginScreen.routeName);
+    Navigator.pushNamed(context, LoginScreen.routeName);
   }
 
   @override
