@@ -10,6 +10,7 @@ import '../../../common/constant/app_string.dart';
 import '../../../common/constant/firebase_repo.dart';
 import '../../../common/utils/utils.dart';
 import '../../../models/user_models.dart';
+import '../../../widgets/mobile_layout_screen.dart';
 import '../screens/otb_screen.dart';
 import '../screens/user_info.dart';
 

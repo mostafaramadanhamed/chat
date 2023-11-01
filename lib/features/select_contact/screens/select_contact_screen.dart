@@ -6,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../common/constant/app_string.dart';
 import '../../../common/widgets/error.dart';
 import '../../../common/widgets/loader.dart';
+import '../controller/select_contact_controller.dart';
 
 class ContactScreen extends ConsumerWidget {
   static const String routeName='/select-contact';
