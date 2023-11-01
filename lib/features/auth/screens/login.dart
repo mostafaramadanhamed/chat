@@ -28,10 +28,10 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
     showCountryPicker(
       context: context,
       showPhoneCode: true, // optional. Shows phone code before the country name.
-      onSelect: (Country _country) {
-        print('Select country: ${_country.countryCode}');
+      onSelect: (Country country) {
+        print('Select country: ${country.countryCode}');
         setState((){
-          country=_country;});
+          country=country;});
 
       },
     );
