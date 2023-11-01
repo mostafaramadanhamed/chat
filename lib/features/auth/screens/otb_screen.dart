@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../common/constant/app_color.dart';
 import '../../../common/constant/app_string.dart';
+import '../controller/auth_controller.dart';
 
 class OtbScreen extends ConsumerWidget {
   static const String routeName='/otb_screen';
@@ -9,7 +10,7 @@ class OtbScreen extends ConsumerWidget {
   const OtbScreen({Key? key, required this.verificationId}) : super(key: key);
 
   void verifyOTB(BuildContext context, String userOTB,WidgetRef ref){
- //   ref.read(authControllerProvider).verifyOTB(context, userOTB, verificationId);
+    ref.read(authControllerProvider).verifyOTB(context, userOTB, verificationId);
   }
   @override
   Widget build(BuildContext context, WidgetRef ref) {

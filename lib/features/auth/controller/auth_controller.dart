@@ -40,13 +40,13 @@ class AuthController{
     );
   }
 
-  // void saveUserDataToFirebase(BuildContext context,String name, File? profilePic){
-  //   authRepository.saveUserDataToFirebase(name: name, profilePic: profilePic, ref: ref, context: context);
-  // }
-  // Stream<UserModel>userDataById(String userId){
-  //   return authRepository.userData(userId);
-  // }
-  // void setUserState(bool isOnline){
-  //   authRepository.setUserState(isOnline);
-  // }
+  void saveUserDataToFirebase(BuildContext context,String name, File? profilePic){
+    authRepository.saveUserDataToFirebase(name: name, profilePic: profilePic, ref: ref, context: context);
+  }
+  Stream<UserModel>userDataById(String userId){
+    return authRepository.userData(userId);
+  }
+  void setUserState(bool isOnline){
+    authRepository.setUserState(isOnline);
+  }
 }

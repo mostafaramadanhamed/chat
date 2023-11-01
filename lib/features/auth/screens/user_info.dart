@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../common/constant/app_assets.dart';
 import '../../../common/constant/app_color.dart';
 import '../../../common/constant/app_string.dart';
+import '../../../common/utils/utils.dart';
 
 class UserInformationScreen extends ConsumerStatefulWidget {
   const UserInformationScreen({Key? key}) : super(key: key);
@@ -23,8 +24,8 @@ class _UserInformationScreenState extends ConsumerState<UserInformationScreen> {
     nameController.dispose();
   }
   void selectImage()async{
-    // image=await pickImageFromGallery(context);
-    // setState((){});
+    image=await pickImageFromGallery(context);
+    setState((){});
   }
 
   void storeUserData()async{

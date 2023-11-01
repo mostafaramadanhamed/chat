@@ -1,9 +1,13 @@
+import 'dart:io';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../common/constant/app_assets.dart';
 import '../../../common/constant/app_string.dart';
+import '../../../common/constant/firebase_repo.dart';
 import '../../../common/utils/utils.dart';
 import '../../../models/user_models.dart';
 import '../screens/otb_screen.dart';
@@ -75,44 +79,44 @@ class AuthRepository{
       showSnackBar(context: context, content: e.message! );
     }
   }
-  // saveUserDataToFirebase({
-  //   required String name,
-  //   required File?profilePic,
-  //   required ProviderRef ref,
-  //   required BuildContext context,
-  // })async{
-  //   try{
-  //     String uid=auth.currentUser!.uid;
-  //     String photoUrl=AppAssets.oTBProfileImage;
-  //     if(profilePic != null){
-  //       photoUrl=await ref.read(commonFirebaseStorageRepositoryProvider)
-  //           .storeFileToFirebase('$profilePic/$uid', profilePic);
-  //     }
-  //     var user=UserModel(uid: uid, name: name,
-  //       profilePic: photoUrl,
-  //       isOnline: true,
-  //       phoneNumber: auth.currentUser!.phoneNumber!,
-  //       groupId: [],
-  //     );
-  //     await firestore.collection(userCollection).doc(uid).set(user.toMap());
-  //     Navigator.pushAndRemoveUntil(
-  //       context,
-  //       MaterialPageRoute(builder: (context)=>const MobileLayoutScreen()),
-  //           (route) => false,
-  //     );
-  //   }
-  //   catch(e){
-  //     showSnackBar(context: context, content: e.toString());
-  //   }
-  // }
-  //
-  // Stream<UserModel> userData(String userId){
-  //   return firestore.collection(userCollection).doc(userId)
-  //       .snapshots().map((event) => UserModel.fromMap(event.data()!));
-  // }
-  // void setUserState(bool isOnline)async{
-  //   await firestore.collection(userCollection).doc(auth.currentUser!.uid).update({
-  //     'isOnline':isOnline,
-  //   });
-  // }
+  saveUserDataToFirebase({
+    required String name,
+    required File?profilePic,
+    required ProviderRef ref,
+    required BuildContext context,
+  })async{
+    try{
+      String uid=auth.currentUser!.uid;
+      String photoUrl=AppAssets.oTBProfileImage;
+      if(profilePic != null){
+        photoUrl=await ref.read(commonFirebaseStorageRepositoryProvider)
+            .storeFileToFirebase('$profilePic/$uid', profilePic);
+      }
+      var user=UserModel(uid: uid, name: name,
+        profilePic: photoUrl,
+        isOnline: true,
+        phoneNumber: auth.currentUser!.phoneNumber!,
+        groupId: [],
+      );
+      await firestore.collection(userCollection).doc(uid).set(user.toMap());
+      Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(builder: (context)=>const MobileLayoutScreen()),
+            (route) => false,
+      );
+    }
+    catch(e){
+      showSnackBar(context: context, content: e.toString());
+    }
+  }
+
+  Stream<UserModel> userData(String userId){
+    return firestore.collection(userCollection).doc(userId)
+        .snapshots().map((event) => UserModel.fromMap(event.data()!));
+  }
+  void setUserState(bool isOnline)async{
+    await firestore.collection(userCollection).doc(auth.currentUser!.uid).update({
+      'isOnline':isOnline,
+    });
+  }
 }
