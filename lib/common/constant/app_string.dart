@@ -14,3 +14,9 @@ class AppString{
   static const contactScreenAppbarTitle='Select contact';
   static const messageNumberNotFound='This number dose not exist in this app ';
 }
+
+const profilePic='profilePic';
+const userCollection='users';
+const chatCollection='chats';
+const messageCollection='messages';
+const orderBy='timeSent';

@@ -3,7 +3,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../common/constant/app_string.dart';
 import '../../../common/utils/utils.dart';
+import '../../../models/user_models.dart';
 import '../screens/otb_screen.dart';
 import '../screens/user_info.dart';
 
@@ -22,19 +24,19 @@ class AuthRepository{
     required this.auth,
     required this.firestore,
   });
-  //
-  // Future<UserModel ? >getCurrentUserData()async{
-  //   var userData= await firestore.
-  //   collection(userCollection)
-  //       .doc(auth.currentUser?.uid).
-  //   get();
-  //   UserModel ? user;
-  //   if(userData.data() != null){
-  //     user=UserModel.fromMap(userData.data()!);
-  //   }
-  //   return user;
-  // }
-  //
+
+  Future<UserModel ? >getCurrentUserData()async{
+    var userData= await firestore.
+    collection(userCollection)
+        .doc(auth.currentUser?.uid).
+    get();
+    UserModel ? user;
+    if(userData.data() != null){
+      user=UserModel.fromMap(userData.data()!);
+    }
+    return user;
+  }
+
   void signInWithPhone(String phoneNumber,BuildContext context)async{
     try{
       await auth.verifyPhoneNumber(
