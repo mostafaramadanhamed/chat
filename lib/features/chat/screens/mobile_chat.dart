@@ -5,6 +5,8 @@ import '../../../common/constant/app_color.dart';
 import '../../../common/widgets/loader.dart';
 import '../../../models/user_models.dart';
 import '../../auth/controller/auth_controller.dart';
+import '../widgets/bottom_chat_field.dart';
+import '../widgets/chat_list.dart';
 
 class MobileChatScreen extends ConsumerWidget {
   static const String routeName='/mobile-chat';

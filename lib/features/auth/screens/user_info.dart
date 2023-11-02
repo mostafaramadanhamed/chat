@@ -6,6 +6,7 @@ import '../../../common/constant/app_assets.dart';
 import '../../../common/constant/app_color.dart';
 import '../../../common/constant/app_string.dart';
 import '../../../common/utils/utils.dart';
+import '../controller/auth_controller.dart';
 
 class UserInformationScreen extends ConsumerStatefulWidget {
   const UserInformationScreen({Key? key}) : super(key: key);
@@ -30,13 +31,13 @@ class _UserInformationScreenState extends ConsumerState<UserInformationScreen> {
 
   void storeUserData()async{
     String name=nameController.text.trim();
-    // if(name.isNotEmpty) {
-    //   ref.read(authControllerProvider).saveUserDataToFirebase(
-    //     context,
-    //     name,
-    //     image,
-    //   );
-    // }
+    if(name.isNotEmpty) {
+      ref.read(authControllerProvider).saveUserDataToFirebase(
+        context,
+        name,
+        image,
+      );
+    }
   }
   @override
   Widget build(BuildContext context) {

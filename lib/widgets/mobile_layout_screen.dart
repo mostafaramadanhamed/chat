@@ -4,7 +4,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../common/constant/app_color.dart';
 import '../common/utils/utils.dart';
 import '../features/auth/controller/auth_controller.dart';
+import '../features/chat/widgets/contact_list.dart';
 import '../features/select_contact/screens/select_contact_screen.dart';
+import '../features/status/screens/confirm_status.dart';
+import '../features/status/screens/status_contact_screen.dart';
 
 
 class MobileLayoutScreen extends ConsumerStatefulWidget {
