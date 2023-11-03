@@ -47,28 +47,28 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDu-PoMXLLNMVABPWrNLK_kDgIYTa9PxBI',
-    appId: '1:164213565917:web:0a8141f0e2f73f87eeee34',
-    messagingSenderId: '164213565917',
-    projectId: 'chat-98a70',
-    authDomain: 'chat-98a70.firebaseapp.com',
-    storageBucket: 'chat-98a70.appspot.com',
+    apiKey: 'AIzaSyAfxTKZSMJuPWSmFnSKcPdS3qFDhTZu4_w',
+    appId: '1:21603549039:web:d946726ca8fa042accb29a',
+    messagingSenderId: '21603549039',
+    projectId: 'whats-65f73',
+    authDomain: 'whats-65f73.firebaseapp.com',
+    storageBucket: 'whats-65f73.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBrBWWMlF8I6OpXTx_tIbgg7DypVTl-cOo',
-    appId: '1:164213565917:android:7d76df7193248f5aeeee34',
-    messagingSenderId: '164213565917',
-    projectId: 'chat-98a70',
-    storageBucket: 'chat-98a70.appspot.com',
+    apiKey: 'AIzaSyBHDaLS90jxkjBEcX3cqN54zn1Zo6JmQC8',
+    appId: '1:21603549039:android:d27fccd5bb52b25dccb29a',
+    messagingSenderId: '21603549039',
+    projectId: 'whats-65f73',
+    storageBucket: 'whats-65f73.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCJeFXjCSlKYn30ljsisnOwWq3zP9NkQXs',
-    appId: '1:164213565917:ios:c6c16a6fb4b82b4deeee34',
-    messagingSenderId: '164213565917',
-    projectId: 'chat-98a70',
-    storageBucket: 'chat-98a70.appspot.com',
+    apiKey: 'AIzaSyDF-S3yJpSrfVldUFT7sn19M4iDzhi-Tx0',
+    appId: '1:21603549039:ios:bdfc5bcbfef411cfccb29a',
+    messagingSenderId: '21603549039',
+    projectId: 'whats-65f73',
+    storageBucket: 'whats-65f73.appspot.com',
     iosBundleId: 'com.example.chat',
   );
 }

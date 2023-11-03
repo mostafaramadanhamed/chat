@@ -107,6 +107,7 @@ class AuthRepository{
       );
     }
     catch(e){
+      print(e);
       showSnackBar(context: context, content: e.toString());
     }
   }

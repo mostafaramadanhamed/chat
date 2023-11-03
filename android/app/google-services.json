@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "164213565917",
-    "project_id": "chat-98a70",
-    "storage_bucket": "chat-98a70.appspot.com"
+    "project_number": "21603549039",
+    "project_id": "whats-65f73",
+    "storage_bucket": "whats-65f73.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:164213565917:android:7d76df7193248f5aeeee34",
+        "mobilesdk_app_id": "1:21603549039:android:d27fccd5bb52b25dccb29a",
         "android_client_info": {
           "package_name": "com.example.chat"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBrBWWMlF8I6OpXTx_tIbgg7DypVTl-cOo"
+          "current_key": "AIzaSyBHDaLS90jxkjBEcX3cqN54zn1Zo6JmQC8"
         }
       ],
       "services": {
