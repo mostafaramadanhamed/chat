@@ -110,9 +110,7 @@ class ChatRepository {
         .collection(chatCollection)
         .doc(receiverUserId)
         .set(senderChatContact.toMap());
-    print(userCollection);
-    print(messageCollection);
-    print(chatCollection);
+
   }
 
   void _saveMessageToMessageSubCollection({
@@ -187,7 +185,8 @@ class ChatRepository {
         messageId: messageId,
         userName: senderUser.name,
         receiverUserName: receiverUserData.name,
-        messageType: MessageEnum.text, repliedMessageType: messageReply==null?MessageEnum.text:messageReply.messageEnum, messageReply: messageReply,
+        messageType: MessageEnum.text,
+         repliedMessageType: messageReply==null?MessageEnum.text:messageReply.messageEnum, messageReply: messageReply,
       );
     } catch (ex) {
       showSnackBar(context: context, content: ex.toString());
